@@ -9,7 +9,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAll",
         policy =>
         {
-            policy.AllowAnyOrigin()
+            policy.WithOrigins("https://authclient-gaeu.onrender.com")
                   .AllowAnyMethod()
                   .AllowAnyHeader();
         });
