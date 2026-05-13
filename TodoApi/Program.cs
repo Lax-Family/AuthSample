@@ -96,6 +96,6 @@ app.MapDelete("/items/{id}", async (int id, ToDoDbContext db) =>
     return Results.Ok(item); // מחזיר את המשימה שנמחקה
 });
 
-app.MapGet("/", () => "AuthServer API is running!");
+//app.MapGet("/", () => "AuthServer API is running!");
 
 app.Run();
