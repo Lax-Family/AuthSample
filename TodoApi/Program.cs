@@ -25,11 +25,11 @@ var app = builder.Build();
 app.UseCors("AllowAll");
 
 // הפעלת ממשק המשתמש
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 
 app.MapGet("/", () => "Hello World!");
@@ -95,5 +95,7 @@ app.MapDelete("/items/{id}", async (int id, ToDoDbContext db) =>
 
     return Results.Ok(item); // מחזיר את המשימה שנמחקה
 });
+
+app.MapGet("/", () => "AuthServer API is running!");
 
 app.Run();
